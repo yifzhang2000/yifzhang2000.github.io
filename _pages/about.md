@@ -34,8 +34,8 @@ You can find my CV here: [CV](https://yifzhang2000.github.io/_pages/CV_final.pdf
 # 📝 Publications 
 
 # 🎖 Honors and Awards
-- *2023.7* First Honor Class Graduated in Applied Mathematics, University of Liverpool, UK.
 - *2024.07* SDSS Departmental and In-State Tuition Award (Fully Funded MS Student), UNC, US.
+- *2023.7* First Honor Class Graduated in Applied Mathematics, University of Liverpool, UK.
 
 
 # 📖 Educations
