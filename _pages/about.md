@@ -19,7 +19,7 @@ redirect_from:
 
 # Welcome to my page!
 
-My name is Yifei Zhang. I am currently a Ph.D. student at the [Yale School of Public Health](https://ysph.yale.edu/) Biostatistics Department, supervised by [Prof Yize Zhao](https://www.yizezhao.com/).Before joining UNC, I earned a Master of Science in Statistics and Operations Research from the [UNC STOR Department](https://stor.unc.edu/), supervised by [Prof Zhengwu Zhang](https://zhengwu.github.io/). Prior to that, I obtained a Bachelor of Science degree in Applied Mathematics from the [University of Liverpool](https://www.liverpool.ac.uk/) and [Xi‘an Jiaotong Liverpool University](https://www.xjtlu.edu.cn/en).
+My name is Yifei Zhang. I am currently a Ph.D. student at the [Yale School of Public Health](https://ysph.yale.edu/) Biostatistics Department, supervised by [Prof Yize Zhao](https://www.yizezhao.com/). Before joining Yale, I earned a Master of Science in Statistics and Operations Research from the [University of North Carolina at Chapel Hill(UNC) STOR Department](https://stor.unc.edu/), supervised by [Prof Zhengwu Zhang](https://zhengwu.github.io/). Prior to that, I obtained a Bachelor of Science degree in Applied Mathematics from the [University of Liverpool](https://www.liverpool.ac.uk/) and [Xi‘an Jiaotong Liverpool University](https://www.xjtlu.edu.cn/en).
 
 
 
