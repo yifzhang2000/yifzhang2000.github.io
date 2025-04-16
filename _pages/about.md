@@ -41,7 +41,7 @@ You can find my CV here: [CV](https://yifzhang2000.github.io/_pages/CV_final.pdf
 # 📖 Educations
 - *2025.08 - Present*, Ph.D. student at Yale School of Public Health, Biostatistics Department, supervised by [Prof Yize Zhao](https://www.yizezhao.com/).
 - *2023.08 - 2025.05*, Master of Science in Statistics and Operations Research from [UNC STOR Department](https://stor.unc.edu/), supervised by [Prof Zhengwu Zhang](https://zhengwu.github.io/).
-- *2021.09 - 2023.07*, Bachelor of Science in Applied Mathematics from [University of Liverpool](https://www.liverpool.ac.uk/) and [Xi‘an Jiaotong Liverpool University](https://www.xjtlu.edu.cn/en).
+- *2021.09 - 2023.07*, Bachelor of Science in Applied Mathematics from [University of Liverpool](https://www.liverpool.ac.uk/).
 - *2019.09 - 2021.07*, Bachelor of Science in Applied Mathematics from [Xi‘an Jiaotong Liverpool University](https://www.xjtlu.edu.cn/en).
 
 # 💬 Invited Talks
