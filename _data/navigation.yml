@@ -2,8 +2,6 @@
 main:
   - title: "About Me"
     url: "/#about-me"
-  - title: "CV"
-    url: "/docs/CV_final.pdf"
   - title: "News"
     url: "/#-news"
   - title: "Publications"
