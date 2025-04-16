@@ -23,7 +23,7 @@ My name is Yifei Zhang. I am currently a Ph.D. student at the [Yale School of Pu
 
 My research interests include high-dimensional data analysis, computational neuroscience, Bayesian data analysis, network analysis, brain connectomics, and machine learning. I am particularly interested in the application of brain connectomics data in deep learning, specifically with diffusion models. Additionally, I have a strong interest in exploring the relationship between Alzheimer’s disease traits and brain connectomics data.
 
-You can find my CV here: [CV](https://github.com/yifzhang2000/yifzhang2000.github.io/blob/main/docs/CV_final.pdf).
+You can find my CV here: [CV](https://yifzhang2000.github.io/_pages/CV_final.pdf).
 
 
 # 🔥 News
