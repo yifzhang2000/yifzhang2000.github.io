@@ -19,41 +19,32 @@ redirect_from:
 
 # Welcome to my page!
 
-My name is Yifei Zhang. I am currently a Ph.D. student at the [Yale School of Public Health](https://ysph.yale.edu/) Biostatistics Department, supervised by [Prof Yize Zhao](https://www.yizezhao.com/). Before joining Yale, I earned a Master of Science in Statistics and Operations Research from the [University of North Carolina at Chapel Hill(UNC) STOR Department](https://stor.unc.edu/), supervised by [Prof Zhengwu Zhang](https://zhengwu.github.io/). Prior to that, I obtained a Bachelor of Science degree in Applied Mathematics from the [University of Liverpool](https://www.liverpool.ac.uk/) and [Xi‘an Jiaotong Liverpool University](https://www.xjtlu.edu.cn/en).
+My name is Yifei Zhang. I am currently a Ph.D. student at the [Yale School of Public Health](https://ysph.yale.edu/) Biostatistics Department, supervised by [Prof Yize Zhao](https://www.yizezhao.com/). Before joining Yale, I earned a Master of Science in Statistics and Operations Research from the [University of North Carolina at Chapel Hill(UNC) STOR Department](https://stor.unc.edu/), supervised by Prof Zhengwu Zhang](https://zhengwu.github.io/). Prior to that, I obtained a Bachelor of Science degree in Applied Mathematics from the [University of Liverpool](https://www.liverpool.ac.uk/) and [Xi‘an Jiaotong Liverpool University](https://www.xjtlu.edu.cn/en).
 
+My research interests include high-dimensional data analysis, computational neuroscience, Bayesian data analysis, network analysis, brain connectomics, and machine learning. I am particularly interested in the application of brain connectomics data in deep learning, specifically with diffusion models. Additionally, I have a strong interest in exploring the relationship between Alzheimer’s disease traits and brain connectomics data.
 
 
 # 🔥 News
-- *2022.02*: &nbsp;🎉🎉 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-- *2022.02*: &nbsp;🎉🎉 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-
+- *2025.04*: &nbsp;🎉🎉  I have successfully passed my Master's thesis defense! Many thanks to Prof Zhengwu Zhang for his careful guidance.
+- *2025.03*: &nbsp;🎉🎉  I am honored to have been admitted to the Yale Biostatistics Program and to join Prof Yize Zhao's group.
+- *2024.09*: &nbsp;🎉🎉  Excited to join the [School of the Data Science and Society Department](https://datascience.unc.edu/) as a Graduate Teaching Assistant.
+- *2024.07*: &nbsp;🎉🎉  I am honored to participate in the [EPIC Summer Camp and Workshop](https://www.unc-epic.org/summer-camp).
 # 📝 Publications 
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">CVPR 2016</div><img src='images/500x300.png' alt="sym" width="100%"></div></div>
-<div class='paper-box-text' markdown="1">
-
-[Deep Residual Learning for Image Recognition](https://openaccess.thecvf.com/content_cvpr_2016/papers/He_Deep_Residual_Learning_CVPR_2016_paper.pdf)
-
-**Kaiming He**, Xiangyu Zhang, Shaoqing Ren, Jian Sun
-
-[**Project**](https://scholar.google.com/citations?view_op=view_citation&hl=zh-CN&user=DhtAFkwAAAAJ&citation_for_view=DhtAFkwAAAAJ:ALROH1vI_8AC) <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong>
-- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-</div>
-</div>
-
-- [Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet](https://github.com), A, B, C, **CVPR 2020**
-
 # 🎖 Honors and Awards
-- *2021.10* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-- *2021.09* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
+- *2023.7* First Honor Class Graduated in Applied Mathematics, University of Liverpool, UK.
+- *2024.07* SDSS Departmental and In-State Tuition Award (Fully Funded MS Student), UNC, US.
+
 
 # 📖 Educations
-- *2019.06 - 2022.04 (now)*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-- *2015.09 - 2019.06*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
+- *2025.08 - Present*, Ph.D. student at Yale School of Public Health, Biostatistics Department, supervised by [Prof Yize Zhao](https://www.yizezhao.com/).
+- *2023.08 - 2025.05*, Master of Science in Statistics and Operations Research from [UNC STOR Department](https://stor.unc.edu/), supervised by [Prof Zhengwu Zhang](https://zhengwu.github.io/).
+- *2021.09 - 2023.07*, Bachelor of Science in Applied Mathematics from [University of Liverpool](https://www.liverpool.ac.uk/) and [Xi‘an Jiaotong Liverpool University](https://www.xjtlu.edu.cn/en).
+- *2019.09 - 2021.07*, Bachelor of Science in Applied Mathematics from [Xi‘an Jiaotong Liverpool University](https://www.xjtlu.edu.cn/en).
 
 # 💬 Invited Talks
-- *2021.06*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-- *2021.03*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet.  \| [\[video\]](https://github.com/)
+- *2024*, “Connecting Questions to Questions: How to Translate Real-World Questions Into Deductible Insights”, [TCM Conference, Durham, NC, USA](https://tcm.ncssm.edu/2024-sessions).
 
 # 💻 Internships
-- *2019.05 - 2020.02*, [Lorem](https://github.com/), China.
+- *2020.05 - 2020.09*, China Construction Bank – Data Analyst Intern, Henan, China.
+
