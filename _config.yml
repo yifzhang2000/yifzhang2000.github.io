@@ -6,7 +6,7 @@
 # `jekyll serve`. If you change this file, please restart the server process.
 
 # Site Settings
-title                    : "Yifei Zhang(张逸飞）"
+title                    : "Yifei Zhang (张逸飞）"
 description              : " "
 repository               : "RayeRen/acad-homepage.github.io"
 google_scholar_stats_use_cdn : true
@@ -24,7 +24,7 @@ author:
   name             : "Yifei Zhang"
   avatar           : "images/3701744836787_.pic_hd.jpg"
   bio              : "Incoming Ph.D. student, School of Public Health, Yale University"
-  location         : "Newhaven, United States"
+  location         : "New Haven, Connecticut, United States"
   employer         :
   pubmed           : 
   googlescholar    : # "https://scholar.google.com/citations?user=YOUR_GOOGLE_SCHOLAR_ID"
