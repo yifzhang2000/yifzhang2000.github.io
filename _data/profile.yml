@@ -1,6 +1,12 @@
 name_en: "Yifei Zhang"
 name_zh: "张 逸 飞"
-tagline: "Biostatistician working at the intersection of high-dimensional inference, brain connectomics, and machine learning."
+tagline: >
+  Biostatistician working at the intersection of high-dimensional inference,
+  brain connectomics, and machine learning. My current focus is the application
+  of diffusion models to brain connectomics data, and the relationship between
+  Alzheimer's disease traits and the brain's structural connectome — combining
+  Bayesian data analysis, network analysis, and computational neuroscience to
+  study the brain at scale.
 
 location: "New Haven, Connecticut · USA"
 email: "yifei.zhang.yz2489@yale.edu"
@@ -10,7 +16,7 @@ portrait: "/images/3701744836787_.pic_hd.jpg"
 affiliation:
   primary: "Yale School of Public Health"
   department: "Department of Biostatistics"
-  role: "Incoming Ph.D. Student"
+  role: "First Year Ph.D. Student"
   advisor:
     name: "Prof. Yize Zhao"
     url: "https://www.yizezhao.com/"
