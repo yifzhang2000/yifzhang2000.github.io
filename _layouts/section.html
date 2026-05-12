@@ -43,11 +43,27 @@ layout: base
     <ol class="timeline reveal">
       {% for pub in p.publications %}
       <li>
-        <span class="time">{{ pub.year }}</span>
-        <div class="body">
-          <strong>{{ pub.title }}</strong><br>
-          <em>{{ pub.authors }}</em>
-          <span class="org">{{ pub.venue }}</span>
+        <span class="time">{{ pub.date | default: pub.year }}</span>
+        <div class="body pub">
+          <h3 class="pub__title">
+            {% if pub.url_abs %}<a href="{{ pub.url_abs }}" target="_blank" rel="noopener">{{ pub.title }}</a>{% else %}{{ pub.title }}{% endif %}
+          </h3>
+          <p class="pub__authors">{{ pub.authors_html }}</p>
+          <p class="pub__meta">
+            {{ pub.venue }}{% if pub.arxiv_id %} · arXiv:{{ pub.arxiv_id }}{% endif %}{% if pub.status %} <span class="status">{{ pub.status }}</span>{% endif %}
+          </p>
+          {% if pub.abstract %}
+          <details class="pub__abstract">
+            <summary><span class="closed">+ Abstract</span><span class="opened">− Abstract</span></summary>
+            <p>{{ pub.abstract }}</p>
+          </details>
+          {% endif %}
+          {% if pub.url_pdf or pub.url_abs %}
+          <div class="pub__links">
+            {% if pub.url_pdf %}<a href="{{ pub.url_pdf }}" target="_blank" rel="noopener">PDF ↗</a>{% endif %}
+            {% if pub.url_abs %}<a href="{{ pub.url_abs }}" target="_blank" rel="noopener">arXiv ↗</a>{% endif %}
+          </div>
+          {% endif %}
         </div>
       </li>
       {% endfor %}

@@ -249,6 +249,94 @@
     }
     .timeline .body .org{ display:block; color:var(--muted); font-size:13.5px; margin-top:.15rem; }
 
+    /* ── Publication card ─────────────────────────────────────── */
+    .pub{ padding-bottom:.4rem; }
+    .pub__title{
+      margin: 0 0 .5rem;
+      font-family: var(--serif);
+      font-weight: 500;
+      font-variation-settings: "opsz" 36;
+      font-size: 1.2rem;
+      line-height: 1.32;
+      letter-spacing: -0.005em;
+      color: var(--ink);
+      max-width: 56em;
+    }
+    .pub__title a{ background:none; color:var(--ink); }
+    .pub__title a:hover{ color:var(--accent); }
+    .pub__authors{
+      margin: 0 0 .35rem;
+      font-family: var(--sans);
+      font-size: 14.5px;
+      line-height: 1.5;
+      color: var(--ink-soft);
+    }
+    .pub__authors .me{ color: var(--accent); font-weight: 500; }
+    .pub__meta{
+      margin: 0 0 .9rem;
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .pub__meta .status{
+      color: var(--accent);
+      padding-left: .8rem;
+      margin-left: .4rem;
+      border-left: 1px solid var(--rule);
+    }
+    .pub__abstract{ margin: .4rem 0 .9rem; }
+    .pub__abstract summary{
+      cursor: pointer;
+      list-style: none;
+      display: inline-flex; align-items: center;
+      font-family: var(--mono);
+      font-size: 10.5px;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--muted);
+      padding: .35rem .75rem;
+      border: 1px solid var(--rule);
+      transition: all .2s ease;
+    }
+    .pub__abstract summary::-webkit-details-marker{ display:none; }
+    .pub__abstract summary:hover{ color: var(--accent); border-color: var(--accent-soft); }
+    .pub__abstract .opened{ display:none; }
+    .pub__abstract[open] .closed{ display:none; }
+    .pub__abstract[open] .opened{ display:inline; color: var(--accent); }
+    .pub__abstract p{
+      margin: .9rem 0 0;
+      font-family: var(--serif);
+      font-weight: 300;
+      font-variation-settings:"opsz" 18;
+      font-size: 14.5px;
+      line-height: 1.6;
+      color: var(--ink-soft);
+      max-width: 60em;
+      padding-left: 1rem;
+      border-left: 1px solid var(--rule);
+    }
+    .pub__links{
+      display:flex; gap:.7rem; flex-wrap:wrap; margin-top:.2rem;
+    }
+    .pub__links a{
+      background:none;
+      font-family: var(--mono);
+      font-size: 10.5px;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      padding: .5rem .9rem;
+      border: 1px solid var(--ink);
+      color: var(--ink);
+      transition: all .2s ease;
+    }
+    .pub__links a:hover{
+      background: var(--accent);
+      border-color: var(--accent);
+      color: var(--paper);
+    }
+
     /* ── Publications empty state ─────────────────────────────── */
     .pubs-empty{
       margin: 0 0 0 7rem;
