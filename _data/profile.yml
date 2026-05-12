@@ -1,0 +1,90 @@
+name_en: "Yifei Zhang"
+name_zh: "张 逸 飞"
+tagline: "Biostatistician working at the intersection of high-dimensional inference, brain connectomics, and machine learning."
+
+location: "New Haven, Connecticut · USA"
+email: "yifei.zhang.yz2489@yale.edu"
+cv_url: "/_pages/CV_final.pdf"
+portrait: "/images/3701744836787_.pic_hd.jpg"
+
+affiliation:
+  primary: "Yale School of Public Health"
+  department: "Department of Biostatistics"
+  role: "Incoming Ph.D. Student"
+  advisor:
+    name: "Prof. Yize Zhao"
+    url: "https://www.yizezhao.com/"
+
+about: >
+  My name is Yifei Zhang. I am an incoming Ph.D. student at the
+  <a href="https://ysph.yale.edu/">Yale School of Public Health</a>
+  Biostatistics Department, supervised by
+  <a href="https://www.yizezhao.com/">Prof. Yize Zhao</a>.
+  Before joining Yale, I earned a Master of Science in Statistics and
+  Operations Research from the
+  <a href="https://stor.unc.edu/">University of North Carolina at Chapel Hill (UNC) STOR Department</a>,
+  supervised by <a href="https://zhengwu.github.io/">Prof. Zhengwu Zhang</a>.
+  Prior to that, I obtained a Bachelor of Science degree in Applied Mathematics
+  from the <a href="https://www.liverpool.ac.uk/">University of Liverpool</a>.
+
+research_statement: >
+  My research interests include high-dimensional data analysis, computational
+  neuroscience, Bayesian data analysis, network analysis, brain connectomics,
+  and machine learning. I am particularly interested in the application of
+  brain connectomics data in deep learning, specifically with diffusion models.
+  I am also drawn to the relationship between Alzheimer's disease traits and
+  brain connectomics data.
+
+interests:
+  - "High-dimensional inference"
+  - "Computational neuroscience"
+  - "Brain connectomics"
+  - "Bayesian data analysis"
+  - "Network analysis"
+  - "Diffusion models"
+  - "Alzheimer's disease"
+  - "Machine learning"
+
+news:
+  - date: "2025.04"
+    body: "Successfully passed my Master's thesis defense. Many thanks to Prof. Zhengwu Zhang for his careful guidance."
+  - date: "2025.03"
+    body: "Honored to have been admitted to the Yale Biostatistics Program and to join Prof. Yize Zhao's group."
+  - date: "2024.09"
+    body: "Joined the <a href=\"https://datascience.unc.edu/\">School of Data Science and Society</a> as a Graduate Teaching Assistant."
+  - date: "2024.07"
+    body: "Honored to participate in the <a href=\"https://www.unc-epic.org/summer-camp\">EPIC Summer Camp and Workshop</a>."
+
+publications: []
+
+honors:
+  - date: "2024.07"
+    body: "SDSS Departmental and In-State Tuition Award (Fully Funded MS Student), UNC, US."
+  - date: "2023.07"
+    body: "First Honor Class Graduate in Applied Mathematics, University of Liverpool, UK."
+
+education:
+  - period: "2025.08 – Present"
+    title: "Ph.D. Student"
+    org: "Yale School of Public Health · Biostatistics"
+    note: "Supervised by <a href=\"https://www.yizezhao.com/\">Prof. Yize Zhao</a>."
+  - period: "2023.08 – 2025.05"
+    title: "M.S. in Statistics & Operations Research"
+    org: "UNC Chapel Hill · STOR Department"
+    note: "Supervised by <a href=\"https://zhengwu.github.io/\">Prof. Zhengwu Zhang</a>."
+  - period: "2019.09 – 2023.07"
+    title: "B.S. in Applied Mathematics"
+    org: "University of Liverpool"
+    note: ""
+
+talks:
+  - date: "2024"
+    title: "Connecting Questions to Questions: How to Translate Real-World Questions Into Deductible Insights"
+    venue: "TCM Conference, Durham, NC, USA"
+    url: "https://tcm.ncssm.edu/2024-sessions"
+
+internships:
+  - period: "2020.05 – 2020.09"
+    role: "Data Analyst Intern"
+    org: "China Construction Bank"
+    location: "Henan, China"
