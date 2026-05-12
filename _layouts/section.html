@@ -1,0 +1,130 @@
+---
+layout: base
+---
+{%- assign p = site.data.profile -%}
+
+<header class="page-hero stagger">
+  <span class="page-hero__num">{{ page.roman }}.</span>
+  <h1 class="page-hero__title">{{ page.heading }}<em style="color:var(--accent);font-style:italic;">.</em></h1>
+  <p class="page-hero__label">{{ page.label }}</p>
+</header>
+
+{% case page.section %}
+
+{% when "research" %}
+  <section class="block">
+    <div class="research-grid reveal">
+      <div class="prose">
+        <p>{{ p.about }}</p>
+        <p>{{ p.research_statement }}</p>
+      </div>
+      <aside class="interests">
+        <h3>Interests</h3>
+        <ul>{% for it in p.interests %}<li>{{ it }}</li>{% endfor %}</ul>
+      </aside>
+    </div>
+  </section>
+
+{% when "news" %}
+  <section class="block">
+    <ol class="timeline reveal">
+      {% for n in p.news %}
+      <li>
+        <span class="time">{{ n.date }}</span>
+        <div class="body">{{ n.body }}</div>
+      </li>
+      {% endfor %}
+    </ol>
+  </section>
+
+{% when "publications" %}
+  <section class="block">
+    {% if p.publications.size > 0 %}
+    <ol class="timeline reveal">
+      {% for pub in p.publications %}
+      <li>
+        <span class="time">{{ pub.year }}</span>
+        <div class="body">
+          <strong>{{ pub.title }}</strong><br>
+          <em>{{ pub.authors }}</em>
+          <span class="org">{{ pub.venue }}</span>
+        </div>
+      </li>
+      {% endfor %}
+    </ol>
+    {% else %}
+    <div class="pubs-empty reveal">
+      <span class="mono">In preparation</span>
+      Manuscripts forthcoming.
+    </div>
+    {% endif %}
+  </section>
+
+{% when "education" %}
+  <section class="block">
+    <ol class="timeline reveal">
+      {% for e in p.education %}
+      <li>
+        <span class="time">{{ e.period }}</span>
+        <div class="body">
+          <strong>{{ e.title }}</strong>
+          <span class="org">{{ e.org }}{% if e.note != "" %} — {{ e.note }}{% endif %}</span>
+        </div>
+      </li>
+      {% endfor %}
+    </ol>
+  </section>
+
+{% when "honors" %}
+  <section class="block">
+    <ol class="timeline reveal">
+      {% for h in p.honors %}
+      <li>
+        <span class="time">{{ h.date }}</span>
+        <div class="body">{{ h.body }}</div>
+      </li>
+      {% endfor %}
+    </ol>
+  </section>
+
+{% when "talks" %}
+  <section class="block">
+    <ol class="timeline reveal">
+      {% for t in p.talks %}
+      <li>
+        <span class="time">{{ t.date }}</span>
+        <div class="body">
+          <strong>“{{ t.title }}”</strong>
+          <span class="org">{% if t.url %}<a href="{{ t.url }}">{{ t.venue }}</a>{% else %}{{ t.venue }}{% endif %}</span>
+        </div>
+      </li>
+      {% endfor %}
+    </ol>
+  </section>
+
+{% when "internships" %}
+  <section class="block">
+    <ol class="timeline reveal">
+      {% for i in p.internships %}
+      <li>
+        <span class="time">{{ i.period }}</span>
+        <div class="body">
+          <strong>{{ i.role }}</strong>
+          <span class="org">{{ i.org }} · {{ i.location }}</span>
+        </div>
+      </li>
+      {% endfor %}
+    </ol>
+  </section>
+
+{% endcase %}
+
+<nav class="page-nav">
+  {% if page.prev_label %}
+    <a class="prev-link" href="{{ page.prev_url }}">{{ page.prev_label }}</a>
+  {% else %}<span></span>{% endif %}
+  <a class="home-link" href="/">Home</a>
+  {% if page.next_label %}
+    <a class="next-link" href="{{ page.next_url }}">{{ page.next_label }}</a>
+  {% else %}<span></span>{% endif %}
+</nav>
