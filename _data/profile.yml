@@ -63,13 +63,32 @@ news:
   - date: "2024.07"
     body: "Honored to participate in the <a href=\"https://www.unc-epic.org/summer-camp\">EPIC Summer Camp and Workshop</a>."
 
+# Rendered as: Title / Authors / Venue[ arXiv:id], status (year)
 publications:
+  - year: "2026"
+    title: "Orthogonal Sparse Subgraph Alignment for Structure-Function Coupling in Brain Networks"
+    authors_html: "Gao, H., Ham, D., <span class=\"me\">Zhang, Y.</span>, Tian, X., Ding, S., Zhao, Y.* and Li, T.*"
+    venue: "Conference on Neural Information Processing Systems (NeurIPS)"
+    status: "accepted"
+
+  - year: "2026"
+    title: "ELPAC: Endpoint-Anchored Latent Progression with Stage-Varying Multimodal Coordination"
+    authors_html: "Ding, S., <span class=\"me\">Zhang, Y.</span>, Tian, X., Guo, Y. and Zhao, Y."
+    venue: "Conference on Neural Information Processing Systems (NeurIPS)"
+    status: "accepted"
+
+  - year: "2026"
+    title: "A Bayesian deep learning framework for brain dynamic functional connectivity linked with cognition"
+    authors_html: "Tian, X., Guo, Y., Ding, S., <span class=\"me\">Zhang, Y.</span>, Esserman, D. and Zhao, Y."
+    venue: "Biometrics"
+    status: "accepted"
+
   - date: "2026.01"
     title: "Attention-Based Variational Framework for Joint and Individual Components Learning with Applications in Brain Network Analysis"
-    authors_html: "<span class=\"me\">Yifei Zhang</span>, Meimei Liu, Zhengwu Zhang"
+    authors_html: "<span class=\"me\">Zhang, Y.</span>, Liu, M. and Zhang, Z."
     venue: "arXiv preprint"
     arxiv_id: "2601.17073"
-    status: "Under review"
+    status: "under review"
     abstract: >
       Brain organization is increasingly characterized through multiple
       imaging modalities, most notably structural connectivity (SC) and
