@@ -54,6 +54,8 @@ interests:
   - "Alzheimer's disease"
 
 news:
+  - date: "2026.09"
+    body: "Two papers accepted to NeurIPS 2026."
   - date: "2025.04"
     body: "Successfully passed my Master's thesis defense. Many thanks to Prof. Zhengwu Zhang for his careful guidance."
   - date: "2025.03"
