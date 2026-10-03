@@ -1,13 +1,6 @@
 ---
-layout: section
+# Old per-section page; now a section of the single-page homepage.
 permalink: /news/
-title: News
-section: news
-roman: II
-heading: News
-label: Recent updates
-prev_label: Research
-prev_url: /research/
-next_label: Publications
-next_url: /publications/
+redirect_to: /#news
+sitemap: false
 ---

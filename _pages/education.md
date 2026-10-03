@@ -1,13 +1,6 @@
 ---
-layout: section
+# Old per-section page; now a section of the single-page homepage.
 permalink: /education/
-title: Education
-section: education
-roman: IV
-heading: Education
-label: Academic record
-prev_label: Publications
-prev_url: /publications/
-next_label: Honors
-next_url: /honors/
+redirect_to: /#education
+sitemap: false
 ---

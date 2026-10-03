@@ -1,13 +1,6 @@
 ---
-layout: section
+# Old per-section page; now a section of the single-page homepage.
 permalink: /talks/
-title: Talks
-section: talks
-roman: VI
-heading: Invited Talks
-label: Selected appearances
-prev_label: Honors
-prev_url: /honors/
-next_label: Internships
-next_url: /internships/
+redirect_to: /#talks
+sitemap: false
 ---

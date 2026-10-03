@@ -6,7 +6,7 @@
 # `jekyll serve`. If you change this file, please restart the server process.
 
 # Site Settings
-title                    : "Yifei Zhang (张逸飞）"
+title                    : "Yifei Zhang (张逸飞)"
 description              : "Biostatistics @ Yale "
 repository               : "RayeRen/acad-homepage.github.io"
 google_scholar_stats_use_cdn : true
@@ -22,8 +22,8 @@ baidu_site_verification  :  # get baidu_site_verification from https://ziyuan.ba
 # Site Author
 author:
   name             : "Yifei Zhang"
-  avatar           : "images/3701744836787_.pic_hd.jpg"
-  bio              : "Incoming Ph.D. student, School of Public Health, Yale University"
+  avatar           : "images/portrait.jpg"
+  bio              : "Ph.D. student, Biostatistics, Yale University"
   location         : "New Haven, Connecticut, USA"
   employer         :
   pubmed           : 

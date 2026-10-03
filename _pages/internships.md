@@ -1,11 +1,6 @@
 ---
-layout: section
+# Old per-section page; now a section of the single-page homepage.
 permalink: /internships/
-title: Internships
-section: internships
-roman: VII
-heading: Internships
-label: Industry experience
-prev_label: Talks
-prev_url: /talks/
+redirect_to: /#experience
+sitemap: false
 ---

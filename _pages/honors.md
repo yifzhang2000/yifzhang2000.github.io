@@ -1,13 +1,6 @@
 ---
-layout: section
+# Old per-section page; now a section of the single-page homepage.
 permalink: /honors/
-title: Honors
-section: honors
-roman: V
-heading: Honors & Awards
-label: Recognition
-prev_label: Education
-prev_url: /education/
-next_label: Talks
-next_url: /talks/
+redirect_to: /#honors
+sitemap: false
 ---

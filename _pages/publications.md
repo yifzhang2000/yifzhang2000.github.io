@@ -1,13 +1,6 @@
 ---
-layout: section
+# Old per-section page; now a section of the single-page homepage.
 permalink: /publications/
-title: Publications
-section: publications
-roman: III
-heading: Publications
-label: Selected work
-prev_label: News
-prev_url: /news/
-next_label: Education
-next_url: /education/
+redirect_to: /#publications
+sitemap: false
 ---

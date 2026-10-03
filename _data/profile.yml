@@ -1,55 +1,57 @@
 name_en: "Yifei Zhang"
-name_zh: "张 逸 飞"
-tagline: >
-  Biostatistician working at the intersection of high-dimensional inference,
-  brain connectomics, and machine learning. My current focus is the application
-  of diffusion models to brain connectomics data, and the relationship between
-  Alzheimer's disease traits and the brain's structural connectome — combining
-  Bayesian data analysis, network analysis, and computational neuroscience to
-  study the brain at scale.
+name_zh: "张逸飞"
 
-location: "New Haven, Connecticut · USA"
+# <meta name="description"> for search engines.
+description: >
+  Yifei Zhang is a Biostatistics Ph.D. student at Yale working on statistical
+  machine learning for neuroimaging, brain connectomics, and Alzheimer's disease.
+
 email: "yifei.zhang.yz2489@yale.edu"
 cv_url: "/_pages/CV_final.pdf"
-portrait: "/images/3701744836787_.pic_hd.jpg"
+portrait: "/images/portrait.jpg"
+
+# Extra links shown after Email · CV in the header. Uncomment to add.
+links:
+  # - label: "Google Scholar"
+  #   url: "https://scholar.google.com/citations?user=XXXX"
+  # - label: "GitHub"
+  #   url: "https://github.com/XXXX"
 
 affiliation:
   primary: "Yale School of Public Health"
   department: "Department of Biostatistics"
-  role: "First Year Ph.D. Student"
-  advisor:
-    name: "Prof. Yize Zhao"
-    url: "https://www.yizezhao.com/"
+  role: "Ph.D. Student"
 
-about: >
-  My name is Yifei Zhang. I am a first year Ph.D. student at the
-  <a href="https://ysph.yale.edu/">Yale School of Public Health</a>
-  Biostatistics Department, supervised by
-  <a href="https://www.yizezhao.com/">Prof. Yize Zhao</a>.
-  Before joining Yale, I earned a Master of Science in Statistics and
-  Operations Research from the
-  <a href="https://stor.unc.edu/">University of North Carolina at Chapel Hill (UNC) STOR Department</a>,
-  supervised by <a href="https://zhengwu.github.io/">Prof. Zhengwu Zhang</a>.
-  Prior to that, I obtained a Bachelor of Science degree in Applied Mathematics
-  from the <a href="https://www.liverpool.ac.uk/">University of Liverpool</a>.
-
-research_statement: >
-  My research interests include high-dimensional data analysis, computational
-  neuroscience, Bayesian data analysis, network analysis, brain connectomics,
-  and machine learning. I am particularly interested in the application of
-  brain connectomics data in deep learning, specifically with diffusion models.
-  I am also drawn to the relationship between Alzheimer's disease traits and
-  brain connectomics data.
+# One string per paragraph; HTML allowed.
+bio:
+  - >
+    I am a second-year Ph.D. student in the
+    <a href="https://ysph.yale.edu/research/department-research/biostatistics/">Department of Biostatistics</a>
+    at the Yale School of Public Health, advised by
+    <a href="https://www.yizezhao.com/">Prof. Yize Zhao</a>.
+    My research focuses on statistical machine learning for multimodal
+    neuroimaging and brain connectomics, with applications to Alzheimer's
+    disease. I develop deep generative models that separate shared and
+    modality-specific variation in structural and functional brain networks
+    and can reconstruct one modality from the other. I also work on modeling
+    disease progression from incomplete, largely cross-sectional biomarker
+    data, and on multimodal normative models of healthy brain aging for
+    identifying disease-related deviations.
+  - >
+    Before Yale, I received an M.S. in Statistics and Operations Research from
+    the <a href="https://stor.unc.edu/">University of North Carolina at Chapel Hill</a>,
+    where I worked with <a href="https://zhengwu.github.io/">Prof. Zhengwu Zhang</a>,
+    and a B.S. in Applied Mathematics from the
+    <a href="https://www.liverpool.ac.uk/">University of Liverpool</a>.
 
 interests:
-  - "High-dimensional inference"
-  - "Computational neuroscience"
+  - "Deep generative models"
+  - "Normative modeling"
+  - "Disease progression modeling"
+  - "Missing data"
+  - "Multimodal neuroimaging"
   - "Brain connectomics"
-  - "Bayesian data analysis"
-  - "Network analysis"
-  - "Diffusion models"
   - "Alzheimer's disease"
-  - "Machine learning"
 
 news:
   - date: "2025.04"
@@ -67,7 +69,7 @@ publications:
     authors_html: "<span class=\"me\">Yifei Zhang</span>, Meimei Liu, Zhengwu Zhang"
     venue: "arXiv preprint"
     arxiv_id: "2601.17073"
-    status: "Under review · IEEE TNNLS"
+    status: "Under review"
     abstract: >
       Brain organization is increasingly characterized through multiple
       imaging modalities, most notably structural connectivity (SC) and

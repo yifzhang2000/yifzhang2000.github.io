@@ -2,57 +2,130 @@
 layout: base
 ---
 {%- assign p = site.data.profile -%}
-<section class="hero">
-  <div class="hero__type stagger">
-    <p class="hero__eyebrow">{{ p.affiliation.role }} · {{ p.affiliation.primary }}</p>
-    <h1 class="hero__title">Yifei <em>Zhang.</em></h1>
-    <p class="hero__zh">{{ p.name_zh }}</p>
-    <p class="hero__lede">{{ p.tagline }}</p>
-    <dl class="hero__meta">
-      <dt>Department</dt><dd>{{ p.affiliation.department }}</dd>
-      <dt>Advisor</dt><dd><a href="{{ p.affiliation.advisor.url }}">{{ p.affiliation.advisor.name }}</a></dd>
-      <dt>Location</dt><dd>{{ p.location }}</dd>
-      <dt>Email</dt><dd><a href="mailto:{{ p.email }}">{{ p.email }}</a></dd>
-    </dl>
+<header class="intro">
+  <div>
+    <h1>{{ p.name_en }}<span class="zh" lang="zh">{{ p.name_zh }}</span></h1>
+    <p class="position">{{ p.affiliation.role }}, {{ p.affiliation.department }}</p>
+    <p class="position">{{ p.affiliation.primary }}</p>
+    <p class="contact">
+      <a href="mailto:{{ p.email }}">{{ p.email }}</a>
+      <span class="sep" aria-hidden="true">·</span> <a href="{{ p.cv_url }}">CV</a>
+      {%- for l in p.links %}
+      <span class="sep" aria-hidden="true">·</span> <a href="{{ l.url }}">{{ l.label }}</a>
+      {%- endfor %}
+    </p>
   </div>
+  <img src="{{ p.portrait }}" alt="Photo of {{ p.name_en }}">
+</header>
 
-  <div class="portrait reveal">
-    <svg viewBox="0 0 400 400" aria-hidden="true">
-      <circle class="ring" cx="200" cy="200" r="196"/>
-      <circle class="ring" cx="200" cy="200" r="172"/>
-      <circle class="ring" cx="200" cy="200" r="148" stroke-dasharray="2 6"/>
-      <g class="tick">
-        <line x1="200" y1="4" x2="200" y2="14"/>
-        <line x1="200" y1="386" x2="200" y2="396"/>
-        <line x1="4" y1="200" x2="14" y2="200"/>
-        <line x1="386" y1="200" x2="396" y2="200"/>
-      </g>
-      <path class="arc" d="M 60 200 Q 200 60 340 200"/>
-      <path class="arc" d="M 80 280 Q 200 360 320 280"/>
-      <path class="arc" d="M 200 40 Q 90 200 200 360"/>
-      <path class="arc" d="M 200 40 Q 310 200 200 360"/>
-      <path class="arc" d="M 120 110 Q 200 200 290 290"/>
-      <path class="arc" d="M 290 110 Q 200 200 110 290"/>
-      <circle class="node" cx="60"  cy="200" r="3.5"/>
-      <circle class="node" cx="340" cy="200" r="3.5"/>
-      <circle class="node" cx="200" cy="40"  r="3.5"/>
-      <circle class="node" cx="200" cy="360" r="3.5"/>
-      <circle class="node" cx="120" cy="110" r="2.5"/>
-      <circle class="node" cx="290" cy="110" r="2.5"/>
-      <circle class="node" cx="110" cy="290" r="2.5"/>
-      <circle class="node" cx="290" cy="290" r="2.5"/>
-    </svg>
-    <div class="portrait__frame">
-      <img src="{{ p.portrait }}" alt="Portrait of {{ p.name_en }}">
-    </div>
-    <div class="portrait__caption">New Haven · 41.31°N 72.92°W</div>
-  </div>
+<section id="about">
+  <h2>About</h2>
+  {% for para in p.bio %}<p>{{ para }}</p>
+  {% endfor %}
 </section>
 
-<section class="block">
-  <div class="cv-card reveal">
-    <span class="lab">Curriculum Vitae</span>
-    <span class="desc">A fuller record — publications, references, coursework.</span>
-    <a class="btn" href="{{ p.cv_url }}" target="_blank" rel="noopener">Download PDF ↗</a>
-  </div>
+<section id="interests">
+  <h2>Research Interests</h2>
+  <ul class="interests">
+    {% for it in p.interests %}<li>{{ it }}</li>
+    {% endfor %}
+  </ul>
 </section>
+
+{% if p.news.size > 0 %}
+<section id="news">
+  <h2>News</h2>
+  <ul class="dated">
+    {% for n in p.news %}
+    <li><span class="date">{{ n.date }}</span><span>{{ n.body }}</span></li>
+    {% endfor %}
+  </ul>
+</section>
+{% endif %}
+
+{% if p.publications.size > 0 %}
+<section id="publications">
+  <h2>Publications &amp; Preprints</h2>
+  <ul class="pubs">
+    {% for pub in p.publications %}
+    <li>
+      <div class="title">{% if pub.url_abs %}<a href="{{ pub.url_abs }}">{{ pub.title }}</a>{% else %}{{ pub.title }}{% endif %}</div>
+      <div class="authors">{{ pub.authors_html }}</div>
+      {%- assign year = pub.year | default: pub.date | slice: 0, 4 %}
+      <div><span class="venue">{{ pub.venue }}</span>{% if pub.arxiv_id %} arXiv:{{ pub.arxiv_id }}{% endif %}{% if year != "" %}, {{ year }}{% endif %}{% if pub.status %} <span class="status">({{ pub.status }})</span>{% endif %}</div>
+      <div class="links">
+        {%- if pub.url_pdf %}<a href="{{ pub.url_pdf }}">PDF</a>{% endif -%}
+        {%- if pub.url_abs %}<a href="{{ pub.url_abs }}">arXiv</a>{% endif -%}
+        {%- if pub.url_code %}<a href="{{ pub.url_code }}">Code</a>{% endif -%}
+        {%- if pub.abstract %}<button type="button" aria-expanded="false" aria-controls="abs-{{ forloop.index }}" hidden>Abstract</button>{% endif -%}
+      </div>
+      {% if pub.abstract %}<p class="abstract" id="abs-{{ forloop.index }}">{{ pub.abstract }}</p>{% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+{% endif %}
+
+<section id="education">
+  <h2>Education</h2>
+  <ul class="dated">
+    {% for e in p.education %}
+    <li>
+      <span class="date">{{ e.period }}</span>
+      <span>{{ e.title }}, {{ e.org }}{% if e.note != "" %}<span class="sub">{{ e.note }}</span>{% endif %}</span>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+
+{% if p.honors.size > 0 %}
+<section id="honors">
+  <h2>Honors &amp; Awards</h2>
+  <ul class="dated">
+    {% for h in p.honors %}
+    <li><span class="date">{{ h.date }}</span><span>{{ h.body }}</span></li>
+    {% endfor %}
+  </ul>
+</section>
+{% endif %}
+
+{% if p.talks.size > 0 %}
+<section id="talks">
+  <h2>Talks</h2>
+  <ul class="dated">
+    {% for t in p.talks %}
+    <li>
+      <span class="date">{{ t.date }}</span>
+      <span>{{ t.title }}<span class="sub">{% if t.url %}<a href="{{ t.url }}">{{ t.venue }}</a>{% else %}{{ t.venue }}{% endif %}</span></span>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+{% endif %}
+
+{% if p.internships.size > 0 %}
+<section id="experience">
+  <h2>Experience</h2>
+  <ul class="dated">
+    {% for i in p.internships %}
+    <li>
+      <span class="date">{{ i.period }}</span>
+      <span>{{ i.role }}, {{ i.org }}<span class="sub">{{ i.location }}</span></span>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+{% endif %}
+
+<script>
+  // Abstracts are visible without JS; with JS they collapse behind a toggle.
+  document.querySelectorAll('.pubs button[aria-controls]').forEach(function (b) {
+    var el = document.getElementById(b.getAttribute('aria-controls'));
+    el.hidden = true;
+    b.hidden = false;
+    b.addEventListener('click', function () {
+      el.hidden = !el.hidden;
+      b.setAttribute('aria-expanded', String(!el.hidden));
+    });
+  });
+</script>
