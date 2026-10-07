@@ -49,12 +49,14 @@ layout: base
   <ul class="pubs">
     {% for pub in p.publications %}
     <li>
-      <div class="title">{% if pub.url_abs %}<a href="{{ pub.url_abs }}">{{ pub.title }}</a>{% else %}{{ pub.title }}{% endif %}</div>
+      {%- assign main_url = pub.url_paper | default: pub.url_abs %}
+      <div class="title">{% if main_url %}<a href="{{ main_url }}">{{ pub.title }}</a>{% else %}{{ pub.title }}{% endif %}</div>
       <div class="authors">{{ pub.authors_html }}</div>
       {%- assign year = pub.year | default: pub.date | slice: 0, 4 %}
-      <div><span class="venue">{{ pub.venue }}</span>{% if pub.arxiv_id %} arXiv:{{ pub.arxiv_id }}{% endif %}{% if pub.status %}, {{ pub.status }}{% endif %}{% if year != "" %} ({{ year }}){% endif %}</div>
-      {%- if pub.url_pdf or pub.url_abs or pub.url_code or pub.abstract %}
+      <div><span class="venue">{{ pub.venue }}</span>{% if pub.arxiv_id %} arXiv:{{ pub.arxiv_id }}{% endif %}{% if pub.details %}, {{ pub.details }}{% endif %}{% if year != "" %} ({{ year }}){% endif %}</div>
+      {%- if pub.url_paper or pub.url_pdf or pub.url_abs or pub.url_code or pub.abstract %}
       <div class="links">
+        {%- if pub.url_paper %}<a href="{{ pub.url_paper }}">Paper</a>{% endif -%}
         {%- if pub.url_pdf %}<a href="{{ pub.url_pdf }}">PDF</a>{% endif -%}
         {%- if pub.url_abs %}<a href="{{ pub.url_abs }}">arXiv</a>{% endif -%}
         {%- if pub.url_code %}<a href="{{ pub.url_code }}">Code</a>{% endif -%}
