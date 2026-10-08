@@ -2,20 +2,38 @@
 # Page shell: <head>, styles, footer.
 ---
 {%- assign p = site.data.profile -%}
+{%- assign base_url = site.url | default: "https://yifzhang2000.github.io" -%}
+{%- capture page_title %}{% if page.title %}{{ page.title }} · {{ p.name_en }}{% else %}{{ p.name_en }}{% endif %}{% endcapture -%}
+{%- assign page_description = page.description | default: p.description | strip -%}
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>{% if page.title %}{{ page.title }} · {{ p.name_en }}{% else %}{{ p.name_en }}{% endif %}</title>
-  <meta name="description" content="{{ page.description | default: p.description | strip }}">
+  <title>{{ page_title }}</title>
+  <meta name="description" content="{{ page_description }}">
   <meta name="author" content="{{ p.name_en }}">
+  <link rel="canonical" href="{{ base_url }}{{ page.url }}">
   {%- if site.google_site_verification %}
   <meta name="google-site-verification" content="{{ site.google_site_verification }}">
   {%- endif %}
 
-  <link rel="icon" href="/images/favicon.ico">
+  <!-- Site name / link previews (otherwise Google labels a github.io site "GitHub") -->
+  <meta property="og:site_name" content="{{ p.name_en }}">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{ page_title }}">
+  <meta property="og:description" content="{{ page_description }}">
+  <meta property="og:url" content="{{ base_url }}{{ page.url }}">
+  <meta property="og:image" content="{{ base_url }}{{ p.portrait }}">
+  <script type="application/ld+json">
+    {"@context": "https://schema.org", "@type": "WebSite", "name": "{{ p.name_en }}", "alternateName": "{{ p.name_zh }}", "url": "{{ base_url }}/"}
+  </script>
+
+  <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
+  <link rel="icon" type="image/png" sizes="192x192" href="/images/android-chrome-192x192.png">
   <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+  <link rel="manifest" href="/images/site.webmanifest">
+  <meta name="theme-color" content="#00356b">
 
   <style>
     :root{
