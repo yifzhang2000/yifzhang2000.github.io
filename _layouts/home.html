@@ -35,9 +35,9 @@ layout: base
 {% if p.news.size > 0 %}
 <section id="news">
   <h2>News</h2>
-  <ul class="dated">
+  <ul class="dated news">
     {% for n in p.news %}
-    <li><span class="date">{{ n.date }}</span><span>{{ n.body }}</span></li>
+    <li><span class="icon" aria-hidden="true">{{ n.icon }}</span><span class="date">{{ n.date }}</span><span>{{ n.body }}</span></li>
     {% endfor %}
   </ul>
 </section>

@@ -6,5 +6,9 @@ permalink: /misc/
 {%- assign p = site.data.profile -%}
 <h1 class="page-title">Misc</h1>
 
-{% for para in p.misc %}<p>{{ para }}</p>
-{% endfor %}
+{% if p.misc_intro %}<p>{{ p.misc_intro }}</p>{% endif %}
+<ul class="misc">
+  {% for m in p.misc %}
+  <li><span class="icon" aria-hidden="true">{{ m.icon }}</span><span><strong>{{ m.title }}</strong>{% if m.detail %}<span class="detail"> · {{ m.detail }}</span>{% endif %}</span></li>
+  {% endfor %}
+</ul>

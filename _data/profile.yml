@@ -51,16 +51,22 @@ interests:
   - "Multimodal neuroimaging"
   - "Brain connectomics"
 
+# icon: an emoji shown before the date (e.g. 📄 paper, 🎓 degree, 🏆 award, 🎤 talk).
 news:
   - date: "2026.09"
+    icon: "📄"
     body: "Two papers accepted to NeurIPS 2026."
   - date: "2025.04"
+    icon: "🎓"
     body: "Successfully passed my Master's thesis defense. Many thanks to Prof. Zhengwu Zhang for his careful guidance."
   - date: "2025.03"
+    icon: "🏛️"
     body: "Honored to have been admitted to the Yale Biostatistics Program and to join Prof. Yize Zhao's group."
   - date: "2024.09"
+    icon: "🧑‍🏫"
     body: "Joined the <a href=\"https://datascience.unc.edu/\">School of Data Science and Society</a> as a Graduate Teaching Assistant."
   - date: "2024.07"
+    icon: "🏕️"
     body: "Honored to participate in the <a href=\"https://www.unc-epic.org/summer-camp\">EPIC Summer Camp and Workshop</a>."
 
 # Rendered as: Title / Authors / Venue[ arXiv:id], details (year)
@@ -164,8 +170,13 @@ teaching:
     course: "STOR 445: Stochastic Modeling"
     org: "UNC Chapel Hill, Department of Statistics and Operations Research"
 
-# Misc page. One string per paragraph; HTML allowed.
+# Misc page: an intro line, then one emoji + title (+ optional detail) per item.
+misc_intro: "Outside of research, I enjoy:"
 misc:
-  - >
-    Outside of research, I enjoy traveling (22 of 195 countries so far),
-    hiking, and working out.
+  - icon: "✈️"
+    title: "Travel"
+    detail: "22 of 195 countries so far"
+  - icon: "🥾"
+    title: "Hiking"
+  - icon: "🏋️"
+    title: "Fitness"
