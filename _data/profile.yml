@@ -124,13 +124,13 @@ honors:
 
 education:
   - period: "2025.08 – Present"
-    title: "Ph.D. Student"
-    org: "Yale School of Public Health · Biostatistics"
+    title: "Ph.D. in Biostatistics, Yale School of Public Health"
+    org: "Yale University"
     logo: "/images/logo-yale.png"
     note: "Supervised by <a href=\"https://www.yizezhao.com/\">Prof. Yize Zhao</a>."
   - period: "2023.08 – 2025.05"
-    title: "M.S. in Statistics & Operations Research"
-    org: "UNC Chapel Hill · STOR Department"
+    title: "M.S. in Statistics and Operations Research"
+    org: "University of North Carolina at Chapel Hill"
     logo: "/images/logo-unc.png"
     note: "Supervised by <a href=\"https://zhengwu.github.io/\">Prof. Zhengwu Zhang</a>."
   - period: "2019.09 – 2023.07"
