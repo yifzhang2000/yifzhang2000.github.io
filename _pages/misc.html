@@ -4,11 +4,46 @@ title: Misc
 permalink: /misc/
 ---
 {%- assign p = site.data.profile -%}
+{%- assign n_countries = 0 -%}
+{%- for r in p.travel %}{% assign n_countries = n_countries | plus: r.countries.size %}{% endfor -%}
 <h1 class="page-title">Misc</h1>
 
 {% if p.misc_intro %}<p>{{ p.misc_intro }}</p>{% endif %}
 <ul class="misc">
   {% for m in p.misc %}
-  <li><span class="icon" aria-hidden="true">{{ m.icon }}</span><span><strong>{{ m.title }}</strong>{% if m.detail %}<span class="detail"> · {{ m.detail }}</span>{% endif %}</span></li>
+  <li><span class="icon" aria-hidden="true">{{ m.icon }}</span><span><strong>{{ m.title }}</strong>
+    {%- if m.count_countries %}<span class="detail"> · {{ n_countries }} of 195 countries so far</span>
+    {%- elsif m.detail %}<span class="detail"> · {{ m.detail }}</span>{% endif %}</span></li>
   {% endfor %}
 </ul>
+
+{% if n_countries > 0 %}
+<section id="travel">
+  <h2>Travel</h2>
+  <style>
+    {% for r in p.travel %}{% for c in r.countries %}.world-map #c{{ c.code }}{ fill:var(--link); display:inline; }
+    {% endfor %}{% endfor %}
+  </style>
+  {% include world-map.svg %}
+  <p class="map-count">{{ n_countries }} / 195 countries</p>
+  <ul class="regions">
+    {% for r in p.travel %}
+    <li><span class="region">{{ r.region }}</span><span>{% for c in r.countries %}<span class="country">{{ c.flag }} {{ c.name }}</span>{% endfor %}</span></li>
+    {% endfor %}
+  </ul>
+</section>
+{% endif %}
+
+{% if p.photos.size > 0 %}
+<section id="photos">
+  <h2>Photos</h2>
+  <div class="photos">
+    {% for ph in p.photos %}
+    <figure>
+      <a href="{{ ph.src }}"><img src="{{ ph.src }}" alt="{{ ph.caption }}" loading="lazy"></a>
+      <figcaption>{{ ph.caption }}</figcaption>
+    </figure>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}

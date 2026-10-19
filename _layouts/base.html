@@ -97,6 +97,20 @@
     .misc li{ display:grid; grid-template-columns:1.5em 1fr; gap:12px; margin-bottom:8px; }
     .misc .detail{ color:var(--muted); }
 
+    .world-map{ display:block; width:100%; height:auto; margin:4px 0 6px; }
+    .world-map path{ fill:#e3e5e8; stroke:#fff; stroke-width:.5; }
+    .world-map .tiny{ display:none; stroke:#fff; stroke-width:1; }
+    .map-count{ margin:0 0 14px; color:var(--muted); font-size:.9rem; text-align:right; }
+    .regions{ list-style:none; margin:0; padding:0; }
+    .regions li{ display:grid; grid-template-columns:6em 1fr; gap:12px; margin-bottom:6px; }
+    .regions .region{ color:var(--muted); }
+    .regions .country{ display:inline-block; margin-right:14px; white-space:nowrap; }
+
+    .photos{ display:grid; grid-template-columns:repeat(auto-fill, minmax(220px, 1fr)); gap:16px; }
+    .photos figure{ margin:0; }
+    .photos img{ display:block; width:100%; aspect-ratio:4 / 3; object-fit:cover; border-radius:4px; }
+    .photos figcaption{ margin-top:6px; font-size:.9rem; color:var(--muted); }
+
     .dated.terms li{ grid-template-columns:11.5em 1fr; }   /* "Fall 2024 – Spring 2025" */
 
     .edu{ list-style:none; margin:0; padding:0; }
@@ -133,6 +147,7 @@
       .edu li{ grid-template-columns:40px 1fr; gap:12px; }
       .dated.news li{ grid-template-columns:1.5em 1fr; gap:2px 10px; }
       .dated.news li > span:last-child{ grid-column:2; }
+      .regions li{ grid-template-columns:1fr; gap:2px; margin-bottom:10px; }
       .edu img{ width:40px; height:40px; }
       .edu .head{ grid-template-columns:1fr; }
     }
