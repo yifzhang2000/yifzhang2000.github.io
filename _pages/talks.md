@@ -1,6 +1,6 @@
 ---
-# Old per-section page; now a section of the single-page homepage.
+# Old per-section page; now a section of /experience/.
 permalink: /talks/
-redirect_to: /#talks
+redirect_to: /experience/#talks
 sitemap: false
 ---

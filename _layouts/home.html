@@ -43,93 +43,16 @@ layout: base
 </section>
 {% endif %}
 
-{% if p.publications.size > 0 %}
-<section id="publications">
-  <h2>Publications &amp; Preprints</h2>
-  <ul class="pubs">
-    {% for pub in p.publications %}
-    <li>
-      {%- assign main_url = pub.url_paper | default: pub.url_abs %}
-      <div class="title">{% if main_url %}<a href="{{ main_url }}">{{ pub.title }}</a>{% else %}{{ pub.title }}{% endif %}</div>
-      <div class="authors">{{ pub.authors_html }}</div>
-      {%- assign year = pub.year | default: pub.date | slice: 0, 4 %}
-      <div><span class="venue">{{ pub.venue }}</span>{% if pub.arxiv_id %} arXiv:{{ pub.arxiv_id }}{% endif %}{% if pub.details %}, {{ pub.details }}{% endif %}{% if year != "" %} ({{ year }}){% endif %}</div>
-      {%- if pub.url_paper or pub.url_pdf or pub.url_abs or pub.url_code or pub.abstract %}
-      <div class="links">
-        {%- if pub.url_paper %}<a href="{{ pub.url_paper }}">Paper</a>{% endif -%}
-        {%- if pub.url_pdf %}<a href="{{ pub.url_pdf }}">PDF</a>{% endif -%}
-        {%- if pub.url_abs %}<a href="{{ pub.url_abs }}">arXiv</a>{% endif -%}
-        {%- if pub.url_code %}<a href="{{ pub.url_code }}">Code</a>{% endif -%}
-        {%- if pub.abstract %}<button type="button" aria-expanded="false" aria-controls="abs-{{ forloop.index }}" hidden>Abstract</button>{% endif -%}
-      </div>
-      {%- endif %}
-      {% if pub.abstract %}<p class="abstract" id="abs-{{ forloop.index }}">{{ pub.abstract }}</p>{% endif %}
-    </li>
-    {% endfor %}
-  </ul>
-</section>
-{% endif %}
-
-<section id="education">
-  <h2>Education</h2>
-  <ul class="dated">
-    {% for e in p.education %}
-    <li>
-      <span class="date">{{ e.period }}</span>
-      <span>{{ e.title }}, {{ e.org }}{% if e.note != "" %}<span class="sub">{{ e.note }}</span>{% endif %}</span>
-    </li>
-    {% endfor %}
-  </ul>
-</section>
-
-{% if p.honors.size > 0 %}
-<section id="honors">
-  <h2>Honors &amp; Awards</h2>
-  <ul class="dated">
-    {% for h in p.honors %}
-    <li><span class="date">{{ h.date }}</span><span>{{ h.body }}</span></li>
-    {% endfor %}
-  </ul>
-</section>
-{% endif %}
-
-{% if p.talks.size > 0 %}
-<section id="talks">
-  <h2>Talks</h2>
-  <ul class="dated">
-    {% for t in p.talks %}
-    <li>
-      <span class="date">{{ t.date }}</span>
-      <span>{{ t.title }}<span class="sub">{% if t.url %}<a href="{{ t.url }}">{{ t.venue }}</a>{% else %}{{ t.venue }}{% endif %}</span></span>
-    </li>
-    {% endfor %}
-  </ul>
-</section>
-{% endif %}
-
-{% if p.internships.size > 0 %}
-<section id="experience">
-  <h2>Experience</h2>
-  <ul class="dated">
-    {% for i in p.internships %}
-    <li>
-      <span class="date">{{ i.period }}</span>
-      <span>{{ i.role }}, {{ i.org }}<span class="sub">{{ i.location }}</span></span>
-    </li>
-    {% endfor %}
-  </ul>
-</section>
-{% endif %}
-
 <script>
-  // Abstracts are visible without JS; with JS they collapse behind a toggle.
-  document.querySelectorAll('.pubs button[aria-controls]').forEach(function (b) {
-    var el = document.getElementById(b.getAttribute('aria-controls'));
-    el.hidden = true;
-    b.hidden = false;
-    b.addEventListener('click', function () {
-      el.hidden = !el.hidden;
-      b.setAttribute('aria-expanded', String(!el.hidden));
-    });
-  });
+  // Sections that used to live on this page now have their own pages; forward old #links.
+  (function () {
+    var moved = {
+      '#publications': '/publications/',
+      '#education': '/experience/#education',
+      '#honors': '/experience/#honors',
+      '#talks': '/experience/#talks',
+      '#experience': '/experience/#internships'
+    };
+    if (moved[location.hash]) location.replace(moved[location.hash]);
+  })();
 </script>

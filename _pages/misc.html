@@ -1,0 +1,10 @@
+---
+layout: base
+title: Misc
+permalink: /misc/
+---
+{%- assign p = site.data.profile -%}
+<h1 class="page-title">Misc</h1>
+
+{% for para in p.misc %}<p>{{ para }}</p>
+{% endfor %}

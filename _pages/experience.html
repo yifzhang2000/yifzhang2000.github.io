@@ -1,0 +1,58 @@
+---
+layout: base
+title: Experience
+permalink: /experience/
+---
+{%- assign p = site.data.profile -%}
+<h1 class="page-title">Experience</h1>
+
+<section id="education">
+  <h2>Education</h2>
+  <ul class="dated">
+    {% for e in p.education %}
+    <li>
+      <span class="date">{{ e.period }}</span>
+      <span>{{ e.title }}, {{ e.org }}{% if e.note != "" %}<span class="sub">{{ e.note }}</span>{% endif %}</span>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+
+{% if p.talks.size > 0 %}
+<section id="talks">
+  <h2>Talks</h2>
+  <ul class="dated">
+    {% for t in p.talks %}
+    <li>
+      <span class="date">{{ t.date }}</span>
+      <span>{{ t.title }}<span class="sub">{% if t.url %}<a href="{{ t.url }}">{{ t.venue }}</a>{% else %}{{ t.venue }}{% endif %}</span></span>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+{% endif %}
+
+{% if p.honors.size > 0 %}
+<section id="honors">
+  <h2>Honors &amp; Awards</h2>
+  <ul class="dated">
+    {% for h in p.honors %}
+    <li><span class="date">{{ h.date }}</span><span>{{ h.body }}</span></li>
+    {% endfor %}
+  </ul>
+</section>
+{% endif %}
+
+{% if p.internships.size > 0 %}
+<section id="internships">
+  <h2>Internships</h2>
+  <ul class="dated">
+    {% for i in p.internships %}
+    <li>
+      <span class="date">{{ i.period }}</span>
+      <span>{{ i.role }}, {{ i.org }}<span class="sub">{{ i.location }}</span></span>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+{% endif %}

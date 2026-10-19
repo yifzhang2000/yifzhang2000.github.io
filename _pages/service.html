@@ -1,0 +1,19 @@
+---
+layout: base
+title: Service
+permalink: /service/
+---
+{%- assign p = site.data.profile -%}
+<h1 class="page-title">Service</h1>
+
+<section id="teaching">
+  <h2>Teaching</h2>
+  <ul class="dated terms">
+    {% for t in p.teaching %}
+    <li>
+      <span class="date">{{ t.term }}</span>
+      <span>{{ t.role }}, {{ t.course }}<span class="sub">{{ t.org }}</span></span>
+    </li>
+    {% endfor %}
+  </ul>
+</section>

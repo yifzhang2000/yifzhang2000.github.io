@@ -1,6 +1,6 @@
 ---
-# Old per-section page; now a section of the single-page homepage.
+# Old per-section page; now a section of /experience/.
 permalink: /internships/
-redirect_to: /#experience
+redirect_to: /experience/#internships
 sitemap: false
 ---

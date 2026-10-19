@@ -51,7 +51,18 @@
                   "PingFang SC", "Hiragino Sans GB", "Noto Sans SC", sans-serif;
       font-size:16px; line-height:1.6;
     }
-    .wrap{ max-width:800px; margin:0 auto; padding:56px 20px 32px; }
+    .wrap{ max-width:800px; margin:0 auto; padding:40px 20px 32px; }
+
+    /* Top navigation */
+    .site-nav{ border-bottom:1px solid var(--rule); }
+    .site-nav .inner{ max-width:800px; margin:0 auto; padding:14px 20px;
+                      display:flex; flex-wrap:wrap; align-items:baseline; justify-content:space-between; gap:6px 24px; }
+    .site-nav .name{ color:var(--text); font-weight:600; font-size:1.05rem; }
+    .site-nav nav{ display:flex; flex-wrap:wrap; gap:4px 20px; }
+    .site-nav nav a{ color:var(--muted); }
+    .site-nav nav a:hover{ color:var(--link-hover); }
+    .site-nav nav a[aria-current="page"]{ color:var(--link); font-weight:600; }
+    .page-title{ margin:0 0 20px; font-size:1.75rem; font-weight:600; line-height:1.25; }
 
     a{ color:var(--link); text-decoration:none; }
     a:hover{ color:var(--link-hover); text-decoration:underline; }
@@ -78,6 +89,7 @@
     .dated li{ display:grid; grid-template-columns:9.5em 1fr; gap:16px; margin-bottom:8px; }
     .dated .date{ color:var(--muted); font-variant-numeric:tabular-nums; white-space:nowrap; }
     .dated .sub{ display:block; color:var(--muted); }
+    .dated.terms li{ grid-template-columns:11.5em 1fr; }   /* "Fall 2024 – Spring 2025" */
 
     .pubs{ list-style:none; margin:0; padding:0; }
     .pubs li{ margin-bottom:18px; }
@@ -97,15 +109,27 @@
             font-size:.875rem; color:var(--muted); }
 
     @media (max-width:600px){
-      .wrap{ padding-top:32px; }
+      .wrap{ padding-top:28px; }
+      .site-nav .inner{ flex-direction:column; gap:6px; }
       .intro{ flex-direction:column-reverse; gap:20px; }
       .intro img{ width:120px; height:150px; }
       .interests{ columns:1; }
-      .dated li{ grid-template-columns:1fr; gap:0; margin-bottom:12px; }
+      .dated li, .dated.terms li{ grid-template-columns:1fr; gap:0; margin-bottom:12px; }
     }
   </style>
 </head>
 <body>
+  <header class="site-nav">
+    <div class="inner">
+      <a class="name" href="/">{{ p.name_en }}</a>
+      <nav aria-label="Main">
+        {%- for item in site.data.navigation.main %}
+        <a href="{{ item.url }}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.title }}</a>
+        {%- endfor %}
+      </nav>
+    </div>
+  </header>
+
   <main class="wrap">
     {{ content }}
 

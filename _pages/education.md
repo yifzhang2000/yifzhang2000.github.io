@@ -1,6 +1,6 @@
 ---
-# Old per-section page; now a section of the single-page homepage.
+# Old per-section page; now a section of /experience/.
 permalink: /education/
-redirect_to: /#education
+redirect_to: /experience/#education
 sitemap: false
 ---

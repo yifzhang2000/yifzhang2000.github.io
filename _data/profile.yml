@@ -147,3 +147,28 @@ internships:
     role: "Data Analyst Intern"
     org: "China Construction Bank"
     location: "Henan, China"
+
+# Service page. Newest first.
+teaching:
+  - term: "Fall 2026"
+    role: "Teaching Assistant"
+    course: "BIS 623: Advanced Regression Models"
+    org: "Yale School of Public Health"
+  - term: "Fall 2024 – Spring 2025"
+    role: "Teaching Assistant"
+    course: "DATA 120: Ethics of AI and Data Science"
+    org: "UNC Chapel Hill, School of Data Science and Society"
+  - term: "Spring 2024"
+    role: "Teaching Assistant"
+    course: "STOR 113: Decision Models for Business and Economics"
+    org: "UNC Chapel Hill, Department of Statistics and Operations Research"
+  - term: "Fall 2023"
+    role: "Teaching Assistant"
+    course: "STOR 445: Stochastic Modeling"
+    org: "UNC Chapel Hill, Department of Statistics and Operations Research"
+
+# Misc page. One string per paragraph; HTML allowed.
+misc:
+  - >
+    Outside of research, I enjoy traveling (22 of 195 countries so far),
+    hiking, and working out.
