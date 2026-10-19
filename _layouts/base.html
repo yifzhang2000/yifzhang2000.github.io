@@ -66,7 +66,7 @@
 
     a{ color:var(--link); text-decoration:none; }
     a:hover{ color:var(--link-hover); text-decoration:underline; }
-    #about a, .dated a{ text-decoration:underline; text-decoration-thickness:1px; text-underline-offset:2px; }
+    #about a, .dated a, .edu a{ text-decoration:underline; text-decoration-thickness:1px; text-underline-offset:2px; }
 
     /* Header */
     .intro{ display:flex; justify-content:space-between; align-items:flex-start; gap:32px; }
@@ -90,6 +90,13 @@
     .dated .date{ color:var(--muted); font-variant-numeric:tabular-nums; white-space:nowrap; }
     .dated .sub{ display:block; color:var(--muted); }
     .dated.terms li{ grid-template-columns:11.5em 1fr; }   /* "Fall 2024 – Spring 2025" */
+
+    .edu{ list-style:none; margin:0; padding:0; }
+    .edu li{ display:grid; grid-template-columns:48px 1fr; gap:16px; align-items:start; margin-bottom:16px; }
+    .edu img{ width:48px; height:48px; object-fit:contain; }
+    .edu .head{ display:grid; grid-template-columns:1fr auto; gap:0 16px; }
+    .edu .date{ color:var(--muted); font-variant-numeric:tabular-nums; white-space:nowrap; }
+    .edu .sub{ color:var(--muted); }
 
     .pubs{ list-style:none; margin:0; padding:0; }
     .pubs li{ margin-bottom:18px; }
@@ -115,6 +122,9 @@
       .intro img{ width:120px; height:150px; }
       .interests{ columns:1; }
       .dated li, .dated.terms li{ grid-template-columns:1fr; gap:0; margin-bottom:12px; }
+      .edu li{ grid-template-columns:40px 1fr; gap:12px; }
+      .edu img{ width:40px; height:40px; }
+      .edu .head{ grid-template-columns:1fr; }
     }
   </style>
 </head>

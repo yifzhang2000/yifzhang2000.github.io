@@ -8,11 +8,15 @@ permalink: /experience/
 
 <section id="education">
   <h2>Education</h2>
-  <ul class="dated">
+  <ul class="edu">
     {% for e in p.education %}
     <li>
-      <span class="date">{{ e.period }}</span>
-      <span>{{ e.title }}, {{ e.org }}{% if e.note != "" %}<span class="sub">{{ e.note }}</span>{% endif %}</span>
+      {% if e.logo %}<img src="{{ e.logo }}" alt="" loading="lazy">{% else %}<span></span>{% endif %}
+      <div>
+        <div class="head"><strong>{{ e.org }}</strong><span class="date">{{ e.period }}</span></div>
+        <div>{{ e.title }}</div>
+        {% if e.note != "" %}<div class="sub">{{ e.note }}</div>{% endif %}
+      </div>
     </li>
     {% endfor %}
   </ul>
@@ -38,20 +42,6 @@ permalink: /experience/
   <ul class="dated">
     {% for h in p.honors %}
     <li><span class="date">{{ h.date }}</span><span>{{ h.body }}</span></li>
-    {% endfor %}
-  </ul>
-</section>
-{% endif %}
-
-{% if p.internships.size > 0 %}
-<section id="internships">
-  <h2>Internships</h2>
-  <ul class="dated">
-    {% for i in p.internships %}
-    <li>
-      <span class="date">{{ i.period }}</span>
-      <span>{{ i.role }}, {{ i.org }}<span class="sub">{{ i.location }}</span></span>
-    </li>
     {% endfor %}
   </ul>
 </section>
