@@ -214,7 +214,3 @@ travel:
   - region: "Oceania"
     countries:
       - { code: "036", name: "Australia", flag: "🇦🇺" }
-
-# Photo wall on the Misc page (shown once there is at least one photo).
-# src: an image under /images/photos/, caption: one short line.
-photos: []

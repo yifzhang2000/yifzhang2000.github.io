@@ -33,17 +33,3 @@ permalink: /misc/
   </ul>
 </section>
 {% endif %}
-
-{% if p.photos.size > 0 %}
-<section id="photos">
-  <h2>Photos</h2>
-  <div class="photos">
-    {% for ph in p.photos %}
-    <figure>
-      <a href="{{ ph.src }}"><img src="{{ ph.src }}" alt="{{ ph.caption }}" loading="lazy"></a>
-      <figcaption>{{ ph.caption }}</figcaption>
-    </figure>
-    {% endfor %}
-  </div>
-</section>
-{% endif %}
