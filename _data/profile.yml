@@ -183,10 +183,11 @@ misc:
 
 # Travel map on the Misc page, grouped by region.
 # code = ISO 3166-1 numeric code (quoted, keep leading zeros); it selects the country on the map.
+# also = extra map regions shaded together with that entry (not counted separately).
 travel:
   - region: "Asia"
     countries:
-      - { code: "156", name: "China", flag: "🇨🇳" }
+      - { code: "156", name: "China", flag: "🇨🇳", also: ["158"] }
       - { code: "392", name: "Japan", flag: "🇯🇵" }
       - { code: "410", name: "South Korea", flag: "🇰🇷" }
       - { code: "764", name: "Thailand", flag: "🇹🇭" }

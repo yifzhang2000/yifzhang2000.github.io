@@ -21,7 +21,7 @@ permalink: /misc/
 <section id="travel">
   <h2>Travel</h2>
   <style>
-    {% for r in p.travel %}{% for c in r.countries %}.world-map #c{{ c.code }}{ fill:var(--link); display:inline; }
+    {% for r in p.travel %}{% for c in r.countries %}.world-map #c{{ c.code }}{% for a in c.also %}, .world-map #c{{ a }}{% endfor %}{ fill:var(--link); display:inline; }
     {% endfor %}{% endfor %}
   </style>
   {% include world-map.svg %}
