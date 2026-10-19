@@ -175,8 +175,8 @@ misc:
   - icon: "✈️"
     title: "Travel"
     count_countries: true   # shows "N of 195 countries so far" from the travel list below
-  - icon: "🥾"
-    title: "Hiking"
+  - icon: "🍳"
+    title: "Cooking"
   - icon: "🏋️"
     title: "Fitness"
 
