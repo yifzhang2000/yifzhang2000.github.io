@@ -3,3 +3,9 @@ push.sh
 .DS_Store
 .bundle/
 vendor/
+cv/*.aux
+cv/*.log
+cv/*.out
+cv/*.fls
+cv/*.fdb_latexmk
+cv/cv.pdf

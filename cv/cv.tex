@@ -1,0 +1,161 @@
+% Academic CV of Yifei Zhang.
+% Build:  cd cv && latexmk -pdf cv.tex && cp cv.pdf ../_pages/CV_final.pdf
+\documentclass[11pt,letterpaper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{charter}
+\usepackage[margin=0.9in]{geometry}
+\usepackage{microtype}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdftitle={Yifei Zhang - Curriculum Vitae}, pdfauthor={Yifei Zhang}}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\frenchspacing
+\emergencystretch=1em
+
+% Section heading: small caps with a rule underneath.
+\newcommand{\cvsection}[1]{%
+  \vspace{14pt}%
+  {\large\scshape #1}\par
+  \vspace{-4pt}\rule{\linewidth}{0.5pt}\par
+  \vspace{4pt}}
+
+% \cventry{left (bold)}{right (dates)}{second line}
+\newcommand{\cventry}[3]{%
+  \textbf{#1}\hfill #2\par
+  \if\relax\detokenize{#3}\relax\else #3\par\fi
+  \vspace{5pt}}
+
+% Dated line with a fixed-width date column: \cvline{text}{dates}
+\newcommand{\cvline}[2]{%
+  \parbox[t]{\dimexpr\linewidth-6.5em\relax}{\raggedright #1}\hfill
+  \parbox[t]{6.3em}{\raggedleft #2}\par\vspace{3pt}}
+
+\newcommand{\me}{\textbf{Zhang, Y.}}
+
+\setlist[enumerate]{leftmargin=1.6em, itemsep=5pt, topsep=2pt}
+\setlist[itemize]{leftmargin=1.2em, itemsep=2pt, topsep=2pt}
+
+\begin{document}
+
+% ---------------------------------------------------------------- header
+\begin{center}
+  {\LARGE\bfseries Yifei Zhang}\par\vspace{4pt}
+  Ph.D. Student, Department of Biostatistics, Yale School of Public Health\par\vspace{2pt}
+  \href{mailto:yifei.zhang.yz2489@yale.edu}{yifei.zhang.yz2489@yale.edu}%
+  \enspace$\cdot$\enspace
+  \href{https://yifzhang2000.github.io}{yifzhang2000.github.io}%
+  \enspace$\cdot$\enspace
+  \href{https://github.com/Yifeizhang-Yale}{github.com/Yifeizhang-Yale}
+\end{center}
+
+% ---------------------------------------------------------------- education
+\cvsection{Education}
+
+\cventry{Yale University}{2025 -- present}
+  {Ph.D. in Biostatistics, Yale School of Public Health. Advisor: Prof.\ Yize Zhao}
+
+\cventry{University of North Carolina at Chapel Hill}{2023 -- 2025}
+  {M.S. in Statistics and Operations Research. Advisor: Prof.\ Zhengwu Zhang}
+
+\cventry{University of Liverpool}{2019 -- 2023}
+  {B.S. in Applied Mathematics, First Class Honours}
+
+% ---------------------------------------------------------------- interests
+\cvsection{Research Interests}
+
+Deep generative models, normative modeling, disease progression modeling,
+multimodal neuroimaging, and brain connectomics.
+
+% ---------------------------------------------------------------- publications
+\cvsection{Publications}
+
+\begin{enumerate}
+  \item Gao, H., Ham, D., \me, Tian, X., Ding, S., Zhao, Y.* and Li, T.* (2026).
+    Orthogonal sparse subgraph alignment for structure--function coupling in brain networks.
+    \textit{Conference on Neural Information Processing Systems (NeurIPS)}, accepted.
+
+  \item Ding, S., \me, Tian, X., Guo, Y. and Zhao, Y. (2026).
+    ELPAC: Endpoint-anchored latent progression with stage-varying multimodal coordination.
+    \textit{Conference on Neural Information Processing Systems (NeurIPS)}, accepted.
+
+  \item Tian, X., Guo, Y., Ding, S., \me, Esserman, D. and Zhao, Y. (2026).
+    A Bayesian deep learning framework for brain dynamic functional connectivity linked with cognition.
+    \textit{Biometrics}, 82(4), ujag174.
+    \href{https://doi.org/10.1093/biomtc/ujag174}{doi:10.1093/biomtc/ujag174}
+\end{enumerate}
+
+\vspace{4pt}
+\textit{Preprints}
+\begin{enumerate}[resume]
+  \item \me, Liu, M. and Zhang, Z. (2026).
+    Attention-based variational framework for joint and individual components learning
+    with applications in brain network analysis.
+    \textit{arXiv preprint} \href{https://arxiv.org/abs/2601.17073}{arXiv:2601.17073}. Under review.
+\end{enumerate}
+
+% ---------------------------------------------------------------- research
+\cvsection{Research Experience}
+
+\cventry{Ph.D. Research, Yale University}{2025 -- present}
+  {Advisor: Prof.\ Yize Zhao. Deep generative models and statistical learning for multimodal
+   neuroimaging, brain connectomics, and disease progression.}
+
+\cventry{M.S. Research, University of North Carolina at Chapel Hill}{2023 -- 2025}{}
+\vspace{-3pt}
+\begin{itemize}
+  \item \textit{Multimodal disentangled network VAE} (with Prof.\ Meimei Liu and Prof.\ Zhengwu Zhang), 2024 -- 2025.
+    Graph variational autoencoders that separate shared and modality-specific components of
+    structural and functional connectivity and predict traits from connectomes.
+  \item \textit{Surface-based connectivity integration (SBCI) for the Human Connectome Project}
+    (with Prof.\ Zhengwu Zhang), 2024 -- 2025.
+    Preprocessed HCP-Aging and HCP-Development diffusion MRI, T1, and resting-state fMRI
+    (FSL, MRtrix3) and extended the SBCI pipeline to generate connectivity under multiple atlases.
+  \item \textit{EPIC: Prediction of Child Behavior Checklist scores}
+    (with Prof.\ Guorong Wu and Prof.\ Zhengwu Zhang), Summer 2024.
+    Combined connectome features (node2vec, JIVE) with XGBoost and Shapley-value feature
+    selection to predict CBCL labels in the ABCD study.
+  \item \textit{Structural connectomes for trait prediction in adolescents}
+    (with Prof.\ Zhengwu Zhang), Spring 2024.
+    Compared PCA-based SVM, logistic regression, and stacking models for predicting traits
+    such as BMI from structural connectomes.
+\end{itemize}
+
+% ---------------------------------------------------------------- talks
+\cvsection{Talks}
+
+\cvline{``Connecting questions to questions: How to translate real-world questions into
+  deductible insights.'' TCM Conference, Durham, NC}{2024}
+
+% ---------------------------------------------------------------- teaching
+\cvsection{Teaching}
+
+\cvline{Teaching Assistant, BIS 623 Advanced Regression Models, Yale University}{Fall 2026}
+\cvline{Teaching Assistant, DATA 120 Ethics of AI and Data Science, UNC Chapel Hill}{2024 -- 2025}
+\cvline{Teaching Assistant, STOR 113 Decision Models for Business and Economics, UNC Chapel Hill}{Spring 2024}
+\cvline{Teaching Assistant, STOR 445 Stochastic Modeling, UNC Chapel Hill}{Fall 2023}
+
+% ---------------------------------------------------------------- honors
+\cvsection{Honors and Awards}
+
+\cvline{SDSS Departmental and In-State Tuition Award (fully funded M.S. student), UNC Chapel Hill}{2024}
+\cvline{First Class Honours in Applied Mathematics, University of Liverpool}{2023}
+
+% ---------------------------------------------------------------- skills
+\cvsection{Skills}
+
+\begin{tabular}{@{}ll@{}}
+  Programming   & R, Python (PyTorch), MATLAB, Java, LaTeX \\
+  Neuroimaging  & FSL, MRtrix3, FreeSurfer \\
+  Tools         & Git, Linux \\
+  Languages     & Chinese (native), English \\
+\end{tabular}
+
+\vfill
+{\footnotesize Last updated: October 2026}
+
+\end{document}
